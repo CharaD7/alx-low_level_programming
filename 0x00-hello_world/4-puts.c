@@ -3,7 +3,7 @@
 /*
  * Description: Uses puts to print statement
  *
- * main - main block
+ * main - Entry point
  *
  * Return: 0
  */
