@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-/*
- * Description: Uses puts to print statement
+/**
  *
  * main - Entry point
  *
