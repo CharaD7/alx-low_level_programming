@@ -1,14 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
 /**
  * main - prints out the number stored in n
  *
  * Return: Always (0) success
  *
  */
-
 int main(void)
 {
         int n;
