@@ -11,7 +11,7 @@ int n;
 
 for (n = 0; n < 10; n++)
 {
-	putchar(48 + n);
+	putchar(48 + n); /*48 is the ASCII for 0, which will make characters integers*/
 }
 
 putchar('\n');
