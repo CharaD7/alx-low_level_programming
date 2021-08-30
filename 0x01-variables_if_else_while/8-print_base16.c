@@ -9,17 +9,16 @@ int main(void)
 {
 
 int c;
+char i = 'a';
 
 for (c = 0; c < 10; c++)
 {
 	putchar(c);
-}
 
-char i = 'a';
-
-for (i = 1; i < 7; i++)
-{
-	putchar(i);
+	while(i <= 'f')
+	{
+		putchar(i);
+	}
 }
 
 putchar('\n');
