@@ -9,9 +9,15 @@ int main(void)
 {
 int c = 0;
 
-for (c = 0; c <= 9; c++)
+while (c < 10)
 {
-	putchar(c + ',\ ');
+	putchar(48 + c);
+	if (c != 9)
+	{
+		putchar(',');
+		putchar(' ');
+	}
+	c++;
 }
 
 putchar('\n');
