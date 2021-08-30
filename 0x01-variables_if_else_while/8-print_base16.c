@@ -15,10 +15,11 @@ for (c = 0; c < 10; c++)
 {
 	putchar(c);
 
-	while(i <= 'f')
-	{
-		putchar(i);
-	}
+}
+
+while(i <= 'f')
+{
+	putchar(i);
 }
 
 putchar('\n');
