@@ -7,42 +7,24 @@
  */
 int main(void)
 {
-int c, d, e;
-int f = 0;
+int c, d;
 
-while (f < 10)
+for (c = 0; c < 99; c++)
 {
-	e = 0;
-	while (e < 10)
+	for (d = c + 1; d < 100; d++)
 	{
-		d = 0;
-		while (d < 10)
+		putchar('0' + (c / 10));
+		putchar('0' + (c % 10));
+		putchar(' ');
+		putchar('0' + (d / 10));
+		putchar('0' + (d % 10));
+		if (c / 10 != 9 || c % 10 != 8)
 		{
-			c = 0;
-			while (c < 10)
-			{
-				if (!(f == c && e == d))
-				{
-					putchar('0' + f);
-					putchar('0' + e);
-					putchar(' ');
-					putchar('0' + d);
-					putchar('0' + c);
-					if (!(f + e == 18 && c + d == 17 && d == 9))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				c++;
-			}
-			d++;
+			putchar(',');
+			putchar(' ');
 		}
-		e++;
 	}
-	f++;
 }
-
 putchar('\n');
 return (0);
 }
