@@ -17,7 +17,7 @@ while (c <= '9')
 	c++;
 }
 
-while(i <= 'f')
+while (i <= 'f')
 {
 	putchar(i);
 	i++;
