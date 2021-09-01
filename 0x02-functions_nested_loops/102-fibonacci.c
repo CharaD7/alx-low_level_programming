@@ -8,17 +8,22 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c, d;
+	int i = 0;
+	long int a = 0, b = 1, next;
 
-	for (c = 0; c <= 47; c++)
+	while (i < 50)
 	{
-		printf("%d ,", a);
-		d = a + b;
+		next = a + b;
 		a = b;
-		b = d;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 49)
+		{
+			printf(", ");
+		}
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
