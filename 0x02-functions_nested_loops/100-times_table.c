@@ -7,44 +7,43 @@
  */
 void print_times_table(int n)
 {
-	int q, r, s;
+	int a = 0, rep, b;
 
-	if (n < 0 && n > 15)
+if (n < 0 || n > 15)
+	return;
+
+while (a <= n)
+{
+	for (b = 0; b <= n; b++)
 	{
-		for (q = 0; q < n; q++)
+		rep = a * b;
+		if (b == 0)
+			_putchar('0' + rep);
+		else if (rep < 10)
 		{
-			for (r = 0; r < n; r++)
-			{
-				s = r * q;
-				if (s <= 9)
-				{
-					if (r != 0)
-					{
-						_putchar(',');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
-				_putchar(s + '0');
-				}
-				else if (s < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(s / 10 + '0');
-					_putchar(s % 10 + '0');
-				}
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(((s / 10) / 10) + '0');
-					_putchar(((s % 100) / 10) + '0');
-					_putchar(((s % 100) % 10) + '0');
-				}
-			}
-			_putchar('\n');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar('0' + rep);
+		}
+		else if (rep < 100)
+		{
+			_putchar(' ');
+			_putchar('0' + rep / 10);
+			_putchar('0' + rep % 10);
+		}
+		else
+		{
+			_putchar('0' + rep / 100);
+			_putchar('0' + (rep - 100) / 10);
+			_putchar('0' + rep % 10);
+		}
+		if (b < n)
+		{
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
+	_putchar('\n');
+	a++;
+}
 }
