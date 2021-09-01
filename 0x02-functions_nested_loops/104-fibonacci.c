@@ -19,5 +19,6 @@ int main(void)
 		b = j;
 	}
 	printf("\n");
+	return (0);
 	
 }
