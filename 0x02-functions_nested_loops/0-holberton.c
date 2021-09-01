@@ -11,7 +11,7 @@ int main(void)
 
 	while (i < 9)
 	{
-		_putchar(c[i]);
+		_putchar(a[i]);
 		i++;
 	}
 
