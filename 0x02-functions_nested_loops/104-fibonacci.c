@@ -1,27 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - Last Fibonacci
+ * main - Prints fibonacci numder to 98
  *
  * Return: 0
  */
-
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, step = 0;
+	int a = 1;
+	int b = 2;
+	int i, j;
 
-	while (i < 98)
+	for (i = 1; i <= 98; i++)
 	{
-		step = a + b;
+		printf("%d ,", a);
+		j = b + a;
 		a = b;
-		b = step;
-		printf("%lu", step);
-
-		if (i < 97)
-			printf(", ");
-		i++;
+		b = j;
 	}
-	putchar('\n');
-	return (0);
+	printf("\n");
+	
 }
