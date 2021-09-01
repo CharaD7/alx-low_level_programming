@@ -7,18 +7,20 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int i, j;
+	int i = 0;
+	unsigned long int a = 0, b = 1, next = 0;
 
-	for (i = 1; i <= 98; i++)
+	while (i < 98)
 	{
-		printf("%d ,", a);
-		j = b + a;
+		next = a + b;
 		a = b;
-		b = j;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 97)
+			printf(", ");
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
-	
 }
