@@ -26,8 +26,8 @@ void rev_string(char *s)
 	while (split--)
 	{
 		b = s[len -a - 1];
-		s[len -a - 1] = s[i];
-		s[i] = b;
+		s[len -a - 1] = s[a];
+		s[a] = b;
 		a++;
 	}
 }
