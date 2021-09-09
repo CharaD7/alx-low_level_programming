@@ -6,7 +6,7 @@
  *
  * @s: Pointer to use
  *
- * Return: voi
+ * Return: void
  */
 
 int _atoi(char *s)

@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * _strcpy - Copy string pointed to be c
+ * _strcpy - Copy string pointed to by c
  *
  * @dest: Pointer destination
  *
- * @src: Poniter to source
+ * @src: Pointer to source
  *
  * Return: void
  */
