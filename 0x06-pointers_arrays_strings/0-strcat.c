@@ -10,7 +10,7 @@
  * Return: Destination value (dest)
  */
 
-char *_strcat(cahr *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int a = -1, b;
 
