@@ -16,9 +16,9 @@ int main(void)
 	srand(time(NULL));
 	total_characters = 0;
 
-	while (total_characters !> 2645)
+	while (total_characters < 2646)
 	{
-		password = rand() % 128; 
+		password = (rand() % 128);
 		total_characters += password;
 
 		printf("%c", password);
