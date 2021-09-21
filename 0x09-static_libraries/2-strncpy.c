@@ -8,6 +8,8 @@
  * @src: Source to copy from
  *
  * @n: Index checker
+ *
+ * Return: Destination value
  */
 
 char *_strncpy(char *dest, char *src, int n)
