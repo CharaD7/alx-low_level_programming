@@ -7,24 +7,27 @@
  *
  * Return: void
  */
+/**
+  * print_number - print numbers chars
+  * @n: integer params
+  * Return: 0
+ **/
 
 void print_number(int n)
 {
-	int a = 1, i, b;
+	unsigned int n1;
+
+	n1 = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		n1 = -n;
 	}
 
-	for (i = 0; n / a > 9; i++, a *= 10)
-	;
-
-	for (; a >= 1; n %= a, a /= 10)
+	if (n1 / 10 != 0)
 	{
-		b = n / a;
-		_putchar('0' + b);
-
+		print_number(n1 / 10);
 	}
+		_putchar((n1 % 10) + '0');
 }
