@@ -11,50 +11,56 @@
  * Return: 0
  */
 
-/**
- * print_buffer - prints buffer
- * @b: buffer
- * @size: size
- * Return: void
- */
-
 void print_buffer(char *b, int size)
 {
-	int o, j, i;
+	int i, count = 0, size2 = size;
+	char *p = b;
 
-	o = 0;
-
-	if (size <= 0)
-	{
+	if (size == 0)
 		printf("\n");
-		return;
-	}
-	while (o < size)
+
+	while (size > 0)
 	{
-		j = size - o < 10 ? size - o : 10;
-		printf("%08x: ", o);
-		for (i = 0; i < 10; i++)
+		printf("%08x:", count);
+
+		i = 0;
+
+		while (size > 0 && i < 10)
 		{
-			if (i < j)
-				printf("%02x", *(b + o + i));
-			else
-				printf("  ");
-			if (i % 2)
-			{
+			if (!(i % 2))
 				printf(" ");
-			}
-		}
-		for (i = 0; i < j; i++)
-		{
-			int c = *(b + o + i);
+			printf("%02x", *p++);
 
-			if (c < 32 || c > 132)
-			{
-				c = '.';
-			}
-			printf("%c", c);
+			i++;
+			size--;
+			count++;
 		}
+
+		while (count % 10 != 0)
+		{
+			if (!(count % 2))
+				printf(" ");
+
+			printf("  ");
+			count++;
+		}
+
+		printf(" ");
+
+		i = 0;
+
+		while (size2 > 0 && i < 10)
+		{
+			if (*b > 31 && *b != 127)
+				printf("%c", *b);
+			else
+				printf(".");
+
+			size2--;
+			i++;
+			b++;
+		}
+
 		printf("\n");
-		o += 10;
 	}
 }
