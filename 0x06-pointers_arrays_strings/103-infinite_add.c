@@ -64,6 +64,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (size_r == y && (s1 != n1 - 1 ||  c == 1))
 			return (0);
 	}
+
 	while (s2 != n2 - 1)
 	{
 		r[y] = *s2 + c;
